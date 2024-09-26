@@ -983,6 +983,10 @@ video {
   font-family: Signika, sans-serif;
 }
 
+.font-fraunces {
+  font-family: Fraunces, serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
