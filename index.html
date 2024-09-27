@@ -1,3 +1,20 @@
+<?php 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$to = "byjiarong@gmail.com";
+$subject = "New form submission";
+
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@demosite.com";
+
+if($email != NULL) {
+    mail($to, $subject, $txt, $headers);
+    echo "Hi " . $name . "! Thank you for checking out my art and reaching out. I will follow up with you shortly.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -103,7 +120,7 @@
   </header>
   <!-- Content -->
   <div class="container mx-auto">
-    <!--h1 class="text-4xl pt-10 pb-8 font-dmmono font-light font-italic">PORTFOLIO</h1-->
+    <h1 class="text-4xl pt-10 pb-8 font-dmmono font-regular font-italic">PORTFOLIO</h1>
     <section class="text-neutral-700">
       <div class="container w-full">
         <div class="flex flex-wrap w-full">

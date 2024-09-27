@@ -1,5 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<?php 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$to = "byjiarong@gmail.com";
+$subject = "New form submission";
+
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@demosite.com";
+
+if($email != NULL) {
+    mail($to, $subject, $txt, $headers);
+    echo "Hi " . $name . "! Thank you for checking out my art and reaching out. I will follow up with you shortly.";
+}
+?>
+
+<!--DOCTYPE html>
+<html lang="en" class="scroll-smooth"-->
 
 <head>
   <meta charset="UTF-8" />
@@ -81,9 +98,9 @@
     <div class="grid grid-cols-2 gap-16">
       <section class="col-span-2 md:col-span-1">
         <div class="max-w-screen-md">
-          <!--h1 class="font-dmmono font-light font-italic text-4xl pt-10 pb-8"><b>CONTACT</b></h1-->
+          <h1 class="font-dmmono font-regualr font-italic text-4xl pt-10 pb-8"><b>CONTACT</b></h1>
 
-          <form class="space-y-8" action="mail_handler.php" method="post">
+          <form class="space-y-8" action="contact.php" method="post">
             <div>
               <label for="name" class="block mb-2 text-sm font-dmmono font-light text-gray-900 dark:text-gray-300">Name</label>
               <input type="name" id="name"
