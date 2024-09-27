@@ -1,4 +1,21 @@
 <?php 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$to = "byjiarong@gmail.com";
+$subject = "New form submission";
+
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@demosite.com";
+
+if($email != NULL) {
+    mail($to, $subject, $txt, $headers);
+    echo "Hi " . $name . "! Thank you for checking out my art and reaching out. I will follow up with you shortly.";
+}
+?>
+
+/*
 if(isset($_POST['submit'])){
     $to = "byjiarong@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
@@ -16,4 +33,5 @@ if(isset($_POST['submit'])){
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     // You cannot use header and echo together. It's one or the other.
     }
-?>
+?> 
+*/
