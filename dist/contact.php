@@ -1,22 +1,5 @@
-<?php 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-$to = "byjiarong@gmail.com";
-$subject = "New form submission";
-
-$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: noreply@demosite.com";
-
-if($email != NULL) {
-    mail($to, $subject, $txt, $headers);
-    echo "Hi " . $name . "! Thank you for checking out my art and reaching out. I will follow up with you shortly.";
-}
-?>
-
-<!--DOCTYPE html>
-<html lang="en" class="scroll-smooth"-->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -84,7 +67,7 @@ if($email != NULL) {
               </a>
             </li>
             <li class="group transition duration-300">
-              <a href="contact.html" class="font-fraunces font-light text-2xl">CONTACT
+              <a href="contact.php" class="font-fraunces font-light text-2xl">CONTACT
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
@@ -99,41 +82,58 @@ if($email != NULL) {
       <section class="col-span-2 md:col-span-1">
         <div class="max-w-screen-md">
           <h1 class="font-dmmono font-regualr font-italic text-4xl pt-10 pb-8"><b>CONTACT</b></h1>
+          <?php 
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
 
-          <form class="space-y-8" action="contact.php" method="post">
-            <div>
-              <label for="name" class="block mb-2 text-sm font-dmmono font-light text-gray-900 dark:text-gray-300">Name</label>
-              <input type="name" id="name"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="First Last" required />
-            </div>
-            <div>
-              <label for="email" class="block mb-2 text-sm font-dmmono font-light  text-gray-900 dark:text-gray-300">Your
-                email</label>
-              <input type="email" id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="example@gmail.com" required />
-            </div>
-            <div>
-              <label for="subject"
-                class="block mb-2 text-sm font-dmmono font-light  text-gray-900 dark:text-gray-300">Subject</label>
-              <input type="text" id="subject"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Let me know how I can help you" required />
-            </div>
-            <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-dmmono font-light  text-gray-900 dark:text-gray-400">Your
-                message</label>
-              <textarea id="message" rows="6"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Leave a comment..." required></textarea>
-            </div>
-            <!--input type="submit" name="submit" value="Submit"-->
-            <button type="submit"
-              class="py-3 px-5 text-sm font-dmmono font-light  text-center bg-black dark:bg-white text-white dark:text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-              Send message
-          </button>
-          </form>
+            $to = "byjiarong@gmail.com";
+            $subject = "New form submission";
+
+            $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+            $headers = "From: noreply@demosite.com";
+
+            if($email != NULL) {
+                mail($to, $subject, $txt, $headers);
+                echo "Hi " . $name . "! Thank you for checking out my art and reaching out. I will follow up with you shortly.";
+            }
+            ?>
+          <div>
+            <form class="space-y-8" action="contact.php" method="post">
+              <div>
+                <label for="name" class="block mb-2 text-sm font-dmmono font-light text-gray-900 dark:text-gray-300">Name</label>
+                <input type="name" id="name"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="First Last" required />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 text-sm font-dmmono font-light  text-gray-900 dark:text-gray-300">Your
+                  email</label>
+                <input type="email" id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="example@gmail.com" required />
+              </div>
+              <div>
+                <label for="subject"
+                  class="block mb-2 text-sm font-dmmono font-light  text-gray-900 dark:text-gray-300">Subject</label>
+                <input type="text" id="subject"
+                  class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="Let me know how I can help you" required />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="message" class="block mb-2 text-sm font-dmmono font-light  text-gray-900 dark:text-gray-400">Your
+                  message</label>
+                <textarea id="message" rows="6"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Leave a comment..." required></textarea>
+              </div>
+              <!--input type="submit" name="submit" value="Submit"-->
+              <button type="submit"
+                class="py-3 px-5 text-sm font-dmmono font-light  text-center bg-black dark:bg-white text-white dark:text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                Send message
+              </button>
+            </form>
+          </div>
         </div>
       </section>
       <div class="col-span-2 md:col-span-1 flex relative">
