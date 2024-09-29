@@ -1,20 +1,3 @@
-<?php 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-$to = "byjiarong@gmail.com";
-$subject = "New form submission";
-
-$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: noreply@demosite.com";
-
-if($email != NULL) {
-    mail($to, $subject, $txt, $headers);
-    echo "Hi " . $name . "! Thank you for checking out my art and reaching out. I will follow up with you shortly.";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -97,18 +80,18 @@ if($email != NULL) {
           <ul id="ulMenu"
             class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
             <li class="group transition duration-300">
-              <a href="index.html" class="font-fraunces font-light text-2xl tap-highlight-transparent">PORTFOLIO
+              <a href="index.html" class="font-fraunces font-thin text-2xl tap-highlight-transparent">PORTFOLIO
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
             <li class="group transition duration-300">
-              <a href="dist/about_me.html" class="font-fraunces font-light text-2xl tap-highlight-transparent">ABOUT ME
+              <a href="dist/about_me.html" class="font-fraunces font-thin text-2xl tap-highlight-transparent">ABOUT ME
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
             <li class="group transition duration-300">
-              <a href="dist/contact.html" class="font-fraunces font-light text-2xl tap-highlight-transparent">CONTACT
+              <a href="dist/contact.html" class="font-fraunces font-thin text-2xl tap-highlight-transparent">CONTACT
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
@@ -120,7 +103,7 @@ if($email != NULL) {
   </header>
   <!-- Content -->
   <div class="container mx-auto">
-    <h1 class="text-4xl pt-10 pb-8 font-dmmono font-regular font-italic">PORTFOLIO</h1>
+    <h1 class="text-4xl pt-10 pb-8 font-dmmono font-light font-italic">PORTFOLIO</h1>
     <section class="text-neutral-700">
       <div class="container w-full">
         <div class="flex flex-wrap w-full">
