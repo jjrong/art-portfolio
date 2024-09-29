@@ -21,6 +21,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
   <!-- End - Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: ["./dist/*.{html,js}"],
+      theme: {
+        extend:
+                {
+                  fontFamily: {
+                    'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+                    'signika': ['Signika', 'sans-serif'],
+                    'fraunces': ['Fraunces', 'serif'],
+                    'dmmono': ['DM Mono', 'sans-serif']
+                  },
+                },
+      },
+      plugins: [],
+    }
+  </script>
 </head>
 
 <body
@@ -81,7 +99,7 @@
     <div class="grid grid-cols-2 gap-16">
       <section class="col-span-2 md:col-span-1">
         <div class="max-w-screen-md">
-          <h1 class="text-4xl pt-10 pb-8 font-dmmono font-light font-italic"><b>CONTACT</b></h1>
+          <h1 class="text-4xl pt-10 pb-8 font-dmmono font-light"><b>CONTACT</b></h1>
           <div>
             <form class="space-y-8" name="contact" data-netlify="true" method="POST" action="/dist/success.html">
               <div>
