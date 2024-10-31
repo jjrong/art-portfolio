@@ -6,8 +6,6 @@
 
 # 📋 About The Project <a name="about-the-project"></a>
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/JoaoFranco03/photography-portfolio)
-
 This is a web-based portfolio for Jiarong Studios, a ceramic studio.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
